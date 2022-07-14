@@ -1,9 +1,14 @@
 import './App.css';
+import Countries from './components/countries';
+import Order from './components/order';
+import SearchBar from './components/searchBar';
 
 function App() {
   return (
     <div className="App">
-      <h1>Henry Countries</h1>
+      <SearchBar />
+      <Order />
+      < Countries/>
     </div>
   );
 }
