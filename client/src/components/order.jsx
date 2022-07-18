@@ -1,8 +1,15 @@
-import { useDispatch } from "react-redux";
-import { orderAlphabetical, orderPopulation, orderByContinent } from "../actions";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { orderAlphabetical, orderPopulation, orderByContinent, getActivities, byActivity } from "../actions";
 
 export default function Order(){
     let dispatch = useDispatch()
+
+    const activities = useSelector(state => state.activities)
+
+    useEffect(() => {
+        dispatch(getActivities())
+    }, [dispatch])
 
     function handleOrderAlphabetical(e){
         e.preventDefault();
@@ -17,6 +24,11 @@ export default function Order(){
     function handleOrderByContinent(e){
         e.preventDefault();
         dispatch(orderByContinent(e.target.value))
+    }
+
+    function handlefilteredByActivity(e){
+        e.preventDefault();
+        dispatch(byActivity(e.target.value))
     }
 
     return <div>
@@ -39,6 +51,13 @@ export default function Order(){
             <option value='North America'>North America</option>
             <option value='Oceania' >Oceania</option>
             <option value='South America'>South America</option>
+        </select>
+
+        <select onChange={handlefilteredByActivity}>
+            <option value="todas">todas</option>
+            {activities.map((act) => (
+                <option value={act.nombre}>{act.nombre}</option>
+            ))}
         </select>
     </div>
 }

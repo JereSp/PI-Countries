@@ -1,14 +1,31 @@
 import './App.css';
 import Countries from './components/countries';
 import Order from './components/order';
-import SearchBar from './components/searchBar';
+import CountryDetail from './components/countryDetail';
+import { Route, Switch} from 'react-router-dom'
+import  AddActiviy  from './components/addActivity';
+import Navbar from './components/navbar'
+import Landing from './components/landing';
 
 function App() {
   return (
     <div className="App">
-      <SearchBar />
-      <Order />
-      < Countries/>
+      <Switch>
+        <Route exact path="/">
+          <Landing/>
+        </Route>
+        <Route exact path='/home'>
+          <Navbar/>
+          <Order />
+          <Countries/>
+        </Route>
+        <Route exact path='/add'>
+          <AddActiviy />
+        </Route>
+        <Route path='/:id'>
+          <CountryDetail/>
+        </Route>
+      </Switch>
     </div>
   );
 }

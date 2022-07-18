@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 
-export default function Country({nombre, bandera, continente}){ //destructuring de props 
+export default function Country({id, nombre, bandera, continente}){ //destructuring de props 
     return <div>
-        <img src={bandera} alt="bandera" width={200}/>
-        <div>Nombre: {nombre} Continente: {continente}</div>
+        <Link to={`/${id}`}>
+            <div>Nombre: {nombre} Continente: {continente}</div>
+            <img src={bandera} alt="bandera" width={200}/>
+        </Link>
     </div>
 }

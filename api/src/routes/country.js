@@ -19,7 +19,9 @@ router.get('/', async (req, res) => {
                 return countries ? res.json(countries) : res.sendStatus(404)
             }
         else {
-            const allCountries = await Country.findAll()
+            const allCountries = await Country.findAll({
+                include: Activity
+            })
             return  res.json(allCountries);
         }
     } catch (error) {
@@ -30,7 +32,9 @@ router.get('/', async (req, res) => {
 router.get('/:idpais', async (req, res) => {
     try {
         const {idpais} = req.params;
-        const country = await Country.findByPk(idpais);
+        const country = await Country.findByPk(idpais, {
+            include: Activity
+        });
         res.json(country || 'pais no encontrado')
     } catch (error) {
         res.send(error)

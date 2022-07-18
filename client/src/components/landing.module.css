@@ -1,0 +1,20 @@
+.container{
+    height: 100%;
+    overflow: hidden;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+}
+
+.boton{
+    position: fixed;
+    top: 25vw;
+    left: 40vw;
+    height: 3rem;
+    width: 6rem;
+    border-radius: 10px;
+    border: 0px solid
+    
+}

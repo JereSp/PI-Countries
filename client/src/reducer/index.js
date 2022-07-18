@@ -1,8 +1,9 @@
-import { FETCH_COUNTRIES, ORDER_ALPHABETICAL, SEARCH_COUNTRIES, ORDER_POPULATION, ORDER_BY_CONTINENT } from "../actions";
+import { FETCH_COUNTRIES, ORDER_ALPHABETICAL, SEARCH_COUNTRIES, ORDER_POPULATION, ORDER_BY_CONTINENT, GET_ACTIVITIES, BY_ACTIVITY } from "../actions";
 
 const initialState = {
     countries : [],
     filteredCountries: [],
+    activities : [],
 }
 
 export default function reducer(state = initialState, action){
@@ -55,6 +56,21 @@ export default function reducer(state = initialState, action){
             return {
                 ...state,
                 filteredCountries: filteredContinents
+            }
+        case GET_ACTIVITIES:
+            return {
+                ...state,
+                activities: action.payload,
+            }
+        case BY_ACTIVITY:
+            const allCountriesActivities = state.countries;
+            const filteredActivities = action.payload === "todas" ? allCountriesActivities.filter((p) => p.activities[0]?.nombre ?  p.activities[0] : false):
+            allCountriesActivities.filter((p) => p.activities.some(({ nombre }) => nombre === action.payload))
+            // p.activities.length > 0  ? p.activities.find(({ nombre }) => nombre === action.payload) : false) // tambien funciona 
+            // allCountriesActivities.filter((p) => p.activities[0]?.nombre ?  p.activities[0].nombre === action.payload : false) // solo funciona con la primer actividad
+            return {
+                ...state,
+                filteredCountries: filteredActivities
             }
         default:
             return state;

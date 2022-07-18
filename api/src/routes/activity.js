@@ -2,6 +2,17 @@ const { Router } = require('express');
 const router = Router();
 const { Activity, Country } = require('../db')
 
+router.get('/', async (req, res) => {
+    try {
+            const activities = await Activity.findAll({  // get para el select en el front que ordena por actividades
+                include: Country  //include para hacer el join de las tablas
+                })
+                return res.json(activities) 
+    } catch (error) {
+        res.send(error)
+    }
+})
+
 router.post('/', async (req, res) => {
     const { nombre, dificultad, duracion, temporada, idpais} = req.body
 
