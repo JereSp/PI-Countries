@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+.container{
+    width: 40%; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    padding: 10%;
+}
+
+.cardPais{
+    width: 400px;
+    padding: 20px;
+    background-color: grey;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: -2px 2px 5px black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bandera{
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: -2px 2px 5px black;
+}
+.cardActividad{
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    background-color: grey;
+    margin-left: 1rem;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: -2px 2px 5px black;
+    text-align: center;
+    align-items: center;
+}
+
+.textoActividad{
+    margin-top: 5rem;
+    font-size: 1.4rem;
+}

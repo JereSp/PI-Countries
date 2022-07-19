@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
 .container{
     height: 100%;
     overflow: hidden;
@@ -8,13 +10,32 @@
     width: 100%;
 }
 
-.boton{
+.button{
     position: fixed;
     top: 25vw;
-    left: 40vw;
-    height: 3rem;
-    width: 6rem;
+    left: 41vw;
+    height: 3.5rem;
+    width: 7.5rem;
     border-radius: 10px;
-    border: 0px solid
-    
+    border: 0px solid;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    background-color: rgb(135, 136, 130);
+    color: rgb(228, 225, 47);
+    box-shadow: -5px 5px 5px black;
+}
+
+.button:hover{
+    background-color: rgb(228, 225, 47);
+    color:rgb(105, 105, 102);
+}
+
+.titulo{
+    color:rgb(228, 225, 47);
+    position: absolute;
+    top: 6vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10rem;
+    text-shadow: -10px 10px 5px black;
 }

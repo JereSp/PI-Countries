@@ -15,7 +15,7 @@ function App() {
           <Landing/>
         </Route>
         <Route exact path='/home'>
-          <Navbar/>
+          <Navbar className="nav"/>
           <Order />
           <Countries/>
         </Route>

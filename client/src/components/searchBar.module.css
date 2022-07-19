@@ -1,0 +1,31 @@
+.searchbar{
+    border-radius: 10px;
+    width: 10rem;
+    height: 2rem;
+    border: none;
+    font-size: 1rem;
+    box-shadow: -5px 5px 5px black;
+}
+
+.searchbar:focus{
+    outline: none;
+}
+
+.boton{
+    margin-left: 4px;
+    width: 4rem;
+    height: 2rem;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    background-color: rgb(135, 136, 130);
+    color: rgb(228, 225, 47);
+    border: none;
+    border-radius: 10px;
+    box-shadow: -3px 5px 5px black;;
+}
+
+.boton:hover{
+    background-color: rgb(228, 225, 47);
+    color:rgb(105, 105, 102);
+}

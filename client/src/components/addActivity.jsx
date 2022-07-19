@@ -1,6 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
 import {useHistory} from "react-router"
+import styles from './addActivity.module.css'
 
 export function validate(input){
     let error = {};
@@ -62,35 +63,35 @@ export default function AddActiviy(){
         })
     }
 
-    return <div>
-        <h3>Agregar actividad</h3>
-        <form onSubmit={handleSubmit}>
+    return <div className={styles.container}>
+        <h3 className={styles.titulo} >Agregar actividad</h3>
+        <form className={styles.form} onSubmit={handleSubmit}>
             <label>Nombre</label>
-            <input onChange={handleChange} name="nombre" type="text" value={activity.nombre}/>
+            <input className={styles.input} onChange={handleChange} name="nombre" type="text" value={activity.nombre}/>
             {
-                error.nombre && <p>{error.nombre}</p>
+                error.nombre && <p className={styles.warning}>{error.nombre}</p>
             }
             <label>Dificultad</label>
-            <input onChange={handleChange} name="dificultad" type="text" value={activity.dificultad}/>
+            <input className={styles.input} onChange={handleChange} name="dificultad" type="text" value={activity.dificultad}/>
             {
-                error.dificultad && <p>{error.dificultad}</p>
+                error.dificultad && <p className={styles.warning}>{error.dificultad}</p>
             }
             <label>Duracion</label>
-            <input onChange={handleChange} name="duracion" type="number" value={activity.duracion}/>
+            <input className={styles.input} onChange={handleChange} name="duracion" type="number" value={activity.duracion}/>
             {
-                error.duracion && <p>{error.duracion}</p>
+                error.duracion && <p className={styles.warning}>{error.duracion}</p>
             }
             <label>Temporada</label>
-            <input onChange={handleChange} name="temporada" type="text" value={activity.temporada}/>
+            <input  className={styles.input} onChange={handleChange} name="temporada" type="text" value={activity.temporada}/>
             {
-                error.temporada && <p>{error.temporada}</p>
+                error.temporada && <p className={styles.warning}>{error.temporada}</p>
             }
             <label>Codigo Pais</label>
-            <input onChange={handleChange} name="idpais" type="text" value={activity.idpais}/>
+            <input className={styles.input} onChange={handleChange} name="idpais" type="text" value={activity.idpais}/>
             {
-                error.idpais && <p>{error.idpais}</p>
+                error.idpais && <p className={styles.warning}>{error.idpais}</p>
             }
-            <input type="submit"/>
+            <input className={styles.boton} type="submit" value="Crear"/>
         </form>
     </div>
 }

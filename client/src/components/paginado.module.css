@@ -1,0 +1,28 @@
+.paginado{
+}
+
+.lista{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.boton{
+    background-color: rgb(135, 136, 130);
+    width: 2rem;
+    height: 1.7rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: -1px 1px 1px black;
+}
+
+.boton:hover{
+    background-color: rgb(228, 225, 47);
+    cursor: pointer;
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+}

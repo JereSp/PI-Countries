@@ -1,3 +1,5 @@
+import styles from './paginado.module.css'
+
 export default function Paginado ({paisesPorPagina, totalPaises, paginacion}){
     const numeroPaginas = [];
 
@@ -6,12 +8,12 @@ export default function Paginado ({paisesPorPagina, totalPaises, paginacion}){
     }
 
     return (
-    <div>
-        <ul>
+    <div className={styles.paginado}>
+        <ul className={styles.lista}>
             {
                 numeroPaginas.map((numero) => (
-                    <li>
-                        <a onClick={() => paginacion(numero)} href="#">{numero}</a>
+                    <li className={styles.boton}>
+                        <a className={styles.link} onClick={() => paginacion(numero)} href="#">{numero}</a>
                     </li>
                 ))
             }

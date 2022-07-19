@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { orderAlphabetical, orderPopulation, orderByContinent, getActivities, byActivity } from "../actions";
+import styles from './order.module.css'
 
 export default function Order(){
     let dispatch = useDispatch()
@@ -31,19 +32,21 @@ export default function Order(){
         dispatch(byActivity(e.target.value))
     }
 
-    return <div>
-        <select onChange={handleOrderAlphabetical}>
+    return <div className={styles.contenedor}>
+        <div className={styles.filtros}>
+        <span className={styles.label}>Orden Alfabetico</span>
+        <select className={styles.select} onChange={handleOrderAlphabetical}>
             <option value="ascendente">A-Z</option>
             <option value="descendente">Z-A</option> 
         </select>
-
-        <select onChange={handleOrderPopulation}>
+        <span className={styles.label}>Poblacion</span>
+        <select className={styles.select} onChange={handleOrderPopulation}>
             <option value="ascendente">Mayor poblacion</option>
             <option value="descendente">Menor poblacion</option> 
         </select>
-
-        <select onChange={handleOrderByContinent}>
-        <option value='todos'>All continents</option>
+        <span className={styles.label}>Continente</span>
+        <select className={styles.select} onChange={handleOrderByContinent}>
+        <option value='todos'>Todos los continentes</option>
             <option value='Africa'>Africa</option>
             <option value='Antarctica'>Antarctica</option>
             <option value='Asia'>Asia</option>
@@ -52,12 +55,16 @@ export default function Order(){
             <option value='Oceania' >Oceania</option>
             <option value='South America'>South America</option>
         </select>
-
-        <select onChange={handlefilteredByActivity}>
-            <option value="todas">todas</option>
+        <span className={styles.label}>Actividad</span>
+        <select className={styles.select} onChange={handlefilteredByActivity}>
+            <option value="todas">Todas</option>
             {activities.map((act) => (
                 <option value={act.nombre}>{act.nombre}</option>
             ))}
         </select>
+            <button className={styles.reset}>
+                <a className={styles.link} href="/home">Resetear</a>
+            </button>
+    </div>
     </div>
 }

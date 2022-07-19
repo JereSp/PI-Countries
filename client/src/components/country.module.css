@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+.contenedor{
+    display: flex;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(70, 70, 70);
+    border-radius: 10px;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    box-shadow: -3px 3px 4px rgb(100, 84, 55);
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.nombre{
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bandera {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
