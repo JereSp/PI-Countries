@@ -5,7 +5,7 @@ const { Activity, Country } = require('../db')
 router.get('/', async (req, res) => {
     try {
             const activities = await Activity.findAll({  // get para el select en el front que ordena por actividades
-                include: Country  //include para hacer el join de las tablas
+                include: Country  
                 })
                 return res.json(activities) 
     } catch (error) {
