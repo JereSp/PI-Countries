@@ -5,7 +5,7 @@ export default function Country({id, nombre, bandera, continente}){ //destructur
     return <div className={styles.contenedor}>
         <Link className={styles.link} to={`/${id}`}>
             <div className={styles.nombre}>Nombre: {nombre} </div>
-            <div>Continente: {continente}</div>
+            <div className={styles.continente}>Continente: {continente}</div>
             <img className={styles.bandera} src={bandera} alt="bandera" width={200}/>
         </Link>
     </div>

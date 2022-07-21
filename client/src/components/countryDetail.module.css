@@ -10,28 +10,31 @@
 }
 
 .cardPais{
+    color: rgba(214, 213, 142, 0.897);
     width: 400px;
     padding: 20px;
-    background-color: grey;
+    background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     border-radius: 20px;
-    box-shadow: -2px 2px 5px black;
+    box-shadow: -2px 2px 5px white;
     font-family: 'Open Sans', sans-serif;
 }
 
 .bandera{
-    width: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     box-shadow: -2px 2px 5px black;
 }
 .cardActividad{
+    color: rgba(214, 213, 142, 0.897);
     font-family: 'Open Sans', sans-serif;
     padding: 20px;
-    background-color: grey;
+    background-color: rgba(0, 0, 0, 0.5);
     margin-left: 1rem;
     width: 400px;
     border-radius: 20px;
-    box-shadow: -2px 2px 5px black;
+    box-shadow: -2px 2px 5px white;
     text-align: center;
     align-items: center;
 }

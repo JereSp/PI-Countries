@@ -23,7 +23,7 @@ export function searchCountries(search){
     return function(dispatch){
         axios.get(`http://localhost:3001/countries?name=${search}`)
         .then((countries) => {
-            dispatch({  //redux thunk nos da esto para funciones asincronicas en las actions :O :O
+            dispatch({  
                 type: SEARCH_COUNTRIES,
                 payload: countries.data
             })

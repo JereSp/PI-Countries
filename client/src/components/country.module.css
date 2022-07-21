@@ -4,12 +4,13 @@
     display: flex;
     width: 300px;
     height: 200px;
-    background-color: rgb(70, 70, 70);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
     border-radius: 10px;
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    box-shadow: -3px 3px 4px rgb(100, 84, 55);
+    box-shadow: -1px 2px 2px white;
 }
 
 .link{
@@ -21,8 +22,13 @@
 
 
 .nombre{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-family: 'Open Sans', sans-serif;
+    color: rgba(214, 213, 142, 0.897);
+}
+
+.continente{
+    color: rgba(214, 213, 142, 0.897);
 }
 
 .bandera {

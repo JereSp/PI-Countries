@@ -91,7 +91,12 @@ export default function AddActiviy(){
             {
                 error.idpais && <p className={styles.warning}>{error.idpais}</p>
             }
+            {
+            Object.keys(error).length === 0 ?
             <input className={styles.boton} type="submit" value="Crear"/>
+            :
+            <></>
+        }
         </form>
     </div>
 }

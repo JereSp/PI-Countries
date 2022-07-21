@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
 .paginado{
 }
 
@@ -25,4 +27,5 @@
 .link{
     color: black;
     text-decoration: none;
+    font-family: 'Open Sans', sans-serif ;
 }
