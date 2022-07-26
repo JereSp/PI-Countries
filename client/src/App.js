@@ -5,16 +5,12 @@ import CountryDetail from './components/countryDetail';
 import { Route, Switch} from 'react-router-dom'
 import  AddActiviy  from './components/addActivity';
 import Navbar from './components/navbar'
-import Landing from './components/landing';
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/">
-          <Landing/>
-        </Route>
-        <Route exact path='/home'>
+        <Route exact path='/'>
           <Navbar className="nav"/>
           <Order />
           <Countries/>
