@@ -10,7 +10,7 @@
 }
 
 .titulo{
-    color: rgb(228, 225, 47);
+    color: #bed1ef;
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     text-shadow: -2px 2px 2px black;
@@ -21,14 +21,15 @@
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-    background-color: rgb(135, 136, 130);
-    color: rgb(228, 225, 47);
+    background-color: #0559e1;
+    color: white;
     border: none;
     border-radius: 10px;
-    box-shadow: -3px 5px 5px black;;
+    box-shadow: -3px 5px 5px black;
+    padding: 0 0.5rem;
 }
 
 .button:hover{
-    background-color: rgb(228, 225, 47);
-    color:rgb(105, 105, 102);
+    background-color: white;
+    color:#0559e1;
 }

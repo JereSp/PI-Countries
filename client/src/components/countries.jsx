@@ -24,7 +24,7 @@ export default function Countries(){
         <div className={styles.main}>
         {paisesActuales.length ? paisesActuales.map((c) => {
             return < Country id={c.id} nombre={c.nombre} bandera={c.imagenBandera} continente={c.continente}/>
-        }): <span>no hay paises</span>}
+        }): <span className={styles.noCountry}>No hay paises</span>}
         </div>
         <Paginado paisesPorPagina={paisesPorPagina} totalPaises={countries.length} paginacion={paginacion}/>
     </div>

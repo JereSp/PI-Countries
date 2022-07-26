@@ -10,22 +10,28 @@
 }
 
 .boton{
-    background-color: rgb(135, 136, 130);
+    background-color: white;
     width: 2rem;
     height: 1.7rem;
     border-radius: 10px;
     text-align: center;
     border: 1px solid black;
     box-shadow: -1px 1px 1px black;
+    color:#0559e1;
 }
 
 .boton:hover{
-    background-color: rgb(228, 225, 47);
+    background-color: #0559e1;
     cursor: pointer;
+    color:white;
 }
 
 .link{
-    color: black;
+    color: inherit;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif ;
+}
+
+.link:hover{
+    color: inherit;
 }

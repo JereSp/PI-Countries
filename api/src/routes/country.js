@@ -3,6 +3,20 @@ const router = Router();
 const { Sequelize } = require('sequelize')
 const { Country, Activity } = require('../db')
 
+router.get('/getpoblacion', async (req, res) => {
+    try {
+        const { numero } = req.query;
+        const countries = await Country.findAll({
+            where: {
+                poblacion: numero 
+            }
+        })
+        res.json(countries)
+    }
+    catch (error) {
+        res.send(error)
+    }
+})
 
 
 router.get('/', async (req, res) => {
@@ -40,6 +54,8 @@ router.get('/:idpais', async (req, res) => {
         res.send(error)
     }
 })
+
+
 
 
 

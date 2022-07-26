@@ -1,6 +1,7 @@
 .App{
     height: 100%;
-    background-image: url(https://i.pinimg.com/originals/46/2f/56/462f56d9c11e41741daae2c35c70f069.jpg);
+    background-color: #111;
+    /* background-image: url(https://i.pinimg.com/originals/46/2f/56/462f56d9c11e41741daae2c35c70f069.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }

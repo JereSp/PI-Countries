@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
 .main{
     margin-top: 1rem;
     margin-left: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
+}
+
+
+.noCountry{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
 }

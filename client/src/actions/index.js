@@ -9,7 +9,7 @@ export const BY_ACTIVITY = 'BY_ACTIVITY'
 
 export function fetchCountries(){
     return function(dispatch){
-        axios.get('http://localhost:3001/countries')
+        axios.get(`/countries`)
         .then((countries) => {
             dispatch({  //redux thunk nos da esto para funciones asincronicas en las actions :O :O
                 type: FETCH_COUNTRIES,
@@ -21,7 +21,7 @@ export function fetchCountries(){
 
 export function searchCountries(search){
     return function(dispatch){
-        axios.get(`http://localhost:3001/countries?name=${search}`)
+        axios.get(`/countries?name=${search}`)
         .then((countries) => {
             dispatch({  
                 type: SEARCH_COUNTRIES,
@@ -54,7 +54,7 @@ export function orderByContinent(continent){
 
 export function getActivities(){
     return async function (dispatch){
-        const respuesta = await axios.get('http://localhost:3001/activities');
+        const respuesta = await axios.get('/activities');
         return dispatch({
             type: GET_ACTIVITIES,
             payload: respuesta.data

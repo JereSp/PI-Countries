@@ -8,7 +8,7 @@ export default function CountryDetail(){
     const [country, setCountry] = useState(null)
     let {id} = useParams()
     useEffect(() => {
-        axios.get(`http://localhost:3001/countries/${id}`)
+        axios.get(`/countries/${id}`)
         .then((respuesta) => {
             setCountry(respuesta.data)
         })
@@ -17,7 +17,7 @@ export default function CountryDetail(){
         <div className={styles.cardPais}>
             {   
                 country?
-                <div>
+                <div className={styles.containerCountry}>
                     <img className={styles.bandera} src={country.imagenBandera} alt="bandera" />
                     <h2>{country.nombre}</h2>
                     <h3>Habitantes: {country.poblacion} millones</h3>
@@ -34,7 +34,7 @@ export default function CountryDetail(){
             {
                 country?
                 country.activities[0]?
-                <div>
+                <div className={styles.containerActivity}>
                     <h3 className={styles.textoActividad}> Actividad: {country.activities[0].nombre} </h3>
                     <h3 className={styles.textoActividad}> Dificultad: {country.activities[0].dificultad} </h3>
                     <h3 className={styles.textoActividad}> Duracion: {country.activities[0].duracion} horas</h3>
@@ -42,7 +42,7 @@ export default function CountryDetail(){
                 </div>
                 
                 :
-                <h3>No hay actividad</h3>
+                <h3 className={styles.noActivity}>No hay actividad</h3>
                 :
                 <h3>Cargando</h3>
             }
