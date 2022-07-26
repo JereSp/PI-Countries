@@ -59,7 +59,7 @@ export default function AddActiviy(){
         e.preventDefault();
         axios.post('/activities', activity)
         .then(() => {
-            history.push('/home')
+            history.push('/')
         })
     }
 
